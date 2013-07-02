@@ -47,3 +47,15 @@ task.json
 It's task's config with some useful info.
 
 **task_name** -- The name of the task.
+
+cfg.json
+--------
+This file describe sizes of animation and tryit panels.
+
+**tryit\_results\_height** -- the height of tryit results. If you dont want to use tryit, then set it to 1.
+
+**tryit\_results\_width**  -- the width of tryit results. If you dont want to use tryit, then set it to 1.
+
+**animation\_panel\_width**  -- the width of animation's panel.
+
+**console\_height** -- the height of bottom console. As usual, set it as tryit_results_height + 30
