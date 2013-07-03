@@ -58,4 +58,4 @@ This file describe sizes of animation and tryit panels.
 
 **animation\_panel\_width**  -- the width of animation's panel.
 
-**console\_height** -- the height of bottom console. As usual, set it as tryit_results_height + 30
+**console\_height** -- the height of bottom console. As usual, set it as tryit\_results\_height + 30

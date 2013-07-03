@@ -1,0 +1,87 @@
+/*Please dont change it */
+
+/*Common*/
+
+.animation_results,
+.animation_results .x-panel-body{
+    background-color: #dfe8f7;
+}
+
+.tryit_results,
+.tryit_results .x-panel-body{
+    background-color: #dfe8f7;
+    overflow: auto;
+}
+
+.animation-success {
+    background: linear-gradient(to bottom, #ffac54 0%,#ff8d2c 100%);
+}
+
+.animation-success div {
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 390px;
+    background-image: url("http://www.checkio.org/static/imgv3/task_solved.png");
+}
+
+.center-exp {
+    margin-left:auto;
+    margin-right:auto;
+    display:table;
+}
+
+/* Animation */
+.animation-content{
+    background-color: #dfe8f7;
+    color: #696969;
+    font-family: verdana;
+    font-size: 15px;
+}
+
+.animation-content .call,
+.animation-content .answer,
+.animation-content .output{
+    font-weight: bold;
+    padding: 10px;
+    border: 2px dotted #a9a9a9;
+    margin: 10px;
+    color: black;
+    text-align: center;
+    letter-spacing: 0.7px;
+    word-break: break-word;
+}
+
+.animation-content .error{
+    color: #de0202;
+    border-color: #de0202;
+}
+
+.tryit-content {
+    background-color: #dfe8f7;
+    font-family: verdana;
+}
+
+.tryit-content .tool td{
+    text-align: center;
+    vertical-align: top;
+}
+
+/*it for firefox*/
+.tryit-content .tool tr:first-child td:last-child {
+    height: 20%;
+}
+
+.tryit-content .checkio-result{
+    font-size: 16px;
+    text-align: center;
+    color: #294270;
+    width: 160px;
+}
+
+.tryit-content .btn {
+
+}
+
+
+/* Your CSS */
+/*          */
