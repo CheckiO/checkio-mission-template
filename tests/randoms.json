@@ -1,0 +1,11 @@
+{
+    "options":{
+        "rand_tests_quantity": 3
+    },
+    "tests":[
+        {
+            "input": "???",
+            "answer": "???"
+        }
+    ]
+}
