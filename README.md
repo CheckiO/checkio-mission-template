@@ -3,6 +3,14 @@ checkio-task-template
 
 Base CheckiO template for users task.
 It have fixed folder's structure, please be careful with it and files' names.
+
+Tasks examples
+--------------
+https://github.com/Bryukh/checkio-task-transposed-matrix
+
+Files definition
+----------------
+
 Below you can read explanation for role of each file of folder inside.
 
 description.html
