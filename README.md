@@ -48,7 +48,7 @@ It's task's config with some useful info.
 
 **task_name** -- The name of the task.
 
-cfg.json
+animation_cfg.json
 --------
 This file describe sizes of animation and tryit panels.
 
@@ -59,3 +59,10 @@ This file describe sizes of animation and tryit panels.
 **animation\_panel\_width**  -- the width of animation's panel.
 
 **console\_height** -- the height of bottom console. As usual, set it as tryit\_results\_height + 30
+
+
+start_code.py
+-------------
+
+The code which user will see as a start template.
+
