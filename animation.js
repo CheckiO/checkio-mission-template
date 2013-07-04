@@ -71,11 +71,11 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
             //Your code here about test explanation animation
             //$content.find(".explanation").html("Something text for example");
-
-
-
-
-
+            //
+            //
+            //
+            //
+            //
 
 
             this_e.setAnimationHeight($content.height() + 60);
@@ -95,13 +95,12 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
         ext.set_generate_animation_panel(function (this_e) {
             $tryit = $(this_e.setHtmlTryIt(ext.get_template('tryit'))).find(".tryit-content");
             //Your code here about tryit animation
-
-
-
-
-
-
-
+            //
+            //
+            //
+            //
+            //
+            //
 
             //run checking
             $tryit.find('.bn-check').click(function (e) {
@@ -116,6 +115,13 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             });
 
         });
+
+
+        //Your Additional functions or objects inside scope
+        //
+        //
+        //
+
 
     }
 );
