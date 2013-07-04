@@ -66,3 +66,28 @@ start_code.py
 
 The code which user will see as a start template.
 
+
+animation.js
+------------
+
+This file describe an animation for tests explanation or tryit.
+It's **not necessary** to change it.
+
+Description of this will be later.
+
+animation.js
+------------
+
+This file describe styles for tests explanation or tryit.
+It's **not necessary** to change it.
+
+Description of this will be later.
+
+template.html
+-------------
+
+This file describe layout and structure for tests explanation or tryit.
+It's **not necessary** to change it.
+
+Description of this will be later.
+
