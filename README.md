@@ -1,8 +1,10 @@
 checkio-task-template
 =====================
 
-Base CheckiO template for users task.
-It have fixed folder's structure, please be careful with it and files' names.
+This is the base CheckiO template for user generated tasks.
+It have fixed the folder structure so please be careful with
+your file and naming conventions.
+
 
 Tasks examples
 --------------
@@ -11,54 +13,66 @@ https://github.com/Bryukh/checkio-task-transposed-matrix
 Files definition
 ----------------
 
-Below you can read explanation for role of each file of folder inside.
+Below you can read an explanation for role of each file and folder inside the project.
 
 description.html
 ----------------
 
-It's description for you task. Here you should explain the goal of the task.
-For this using HTML syntax. This block will be inserted at the task page.
+This file is a description for your task.
+Here, you should explain the goal for the task.
+When writing this file, you must use proper HTML syntax for the description to
+be readable on the site as it will be inserted on the task page as a block.
 
 #### Story
-First paragraph has class "story" -- this is some funny story about task, it does not explain task's goal.
-This is not necessary. This is paragraph does not show in the editor's task description.
+The first paragraph or div has the class "story" --
+this is some funny story about task, it does not need to
+explain task's goal. A paragraph of div with the story
+class does not show in the editor's task description.
 
 #### Task's text
-Next, the main description of the task. You can insert some images 
-for explanation (see bellow about images). Also you can use html tags as *em* **strong** or *pre* for some formulas.
-Each paragraph or *div* element can have class "for_editor_only" or "for_info_only".
-"for_editor_only" -- it's showed only in the editor mode.
-"for_info_only" -- it's showed only main task's description.
+Next, you must write the main description of the task.
+You can insert some images for explanation (see below for
+information about images) and you can use html tags as 
+em strong or pre to display formulas or example code.
+Each paragraph or div element can have the class
+"for_editor_only" or "for_info_only".
+
+**"for_editor_only"** – means that the element will only show in the editor mode.
+
+**"for_info_only"** – will only show up in the main task description.
 
 #### Input and Output
 This is short description of input and output data.
 
 #### Example
-This is some examples for your task. You can use for this *pre* tag with class "brush: python" for syntax highlight.
+This section gives some examples for the task.
+You can use the pre tag with class "brush: python" for syntax highlighting.
 
 #### Images
-You can paste your images inside task. The files for these must be placed inside **illustrations** folder.
+You can paste your images inside task.
+The files for these must be placed inside the illustrations folder.
 The link defined as src="/static/files/illustrations/*image-name.png*"
-Illustrations should be created with specified colors from colors guide (*color.pdf*)
+Illustrations should be created with specified colors from colors guide. (*color.pdf*)
 
 #### Icons
-Icons for task placed inside *icon* folder. Icons created as pair:
-*disabled.png* -- for unsolved tasks.
-*enabled.png* -- for solved tasks.
+Icons for task placed inside icon folder.
+Icons are created as pair: 
+**disabled.png** for unsolved tasks and **enabled.png** for solved tasks.
 In the task runner you can see the both icons with click to it.
-Icons should be created with specified icons' colors from colors guide (*color.pdf*).
+Icons should be created with specified icons' colors from colors
+guide (*color.pdf*).
 Icons must have size 128x128 and placed inside grey color with size 116x116 at center with border radius 10.
-Just use given template.
+Use the given template.
 
 task.json
 ---------
-It's task's config with some useful info.
+This is the task config with some useful info.
 
 **task_name** -- The name of the task.
 
 animation_cfg.json
 --------
-This file describe sizes of animation and tryit panels.
+This file describes sizes of animation and how the tryit panel behaves.
 
 **tryit\_results\_height** -- the height of tryit results. If you dont want to use tryit, then set it to 1.
 
@@ -68,12 +82,10 @@ This file describe sizes of animation and tryit panels.
 
 **console\_height** -- the height of bottom console. As usual, set it as tryit\_results\_height + 30
 
-
 start_code.py
 -------------
 
-The code which user will see as a start template.
-
+Here is the code which users will see as a starting template.
 
 animation.js
 ------------
@@ -81,7 +93,7 @@ animation.js
 This file describe an animation for tests explanation or tryit.
 It's **not necessary** to change it.
 
-Description of this will be later.
+Further description of this will be added later.
 
 animation.js
 ------------
@@ -89,7 +101,7 @@ animation.js
 This file describe styles for tests explanation or tryit.
 It's **not necessary** to change it.
 
-Description of this will be later.
+Further description of this will be added later.
 
 template.html
 -------------
@@ -97,5 +109,5 @@ template.html
 This file describe layout and structure for tests explanation or tryit.
 It's **not necessary** to change it.
 
-Description of this will be later.
+Further description of this will be added later.
 
