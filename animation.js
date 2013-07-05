@@ -89,27 +89,26 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
         //this function process returned data and show it
         ext.set_console_process_ret(function (this_e, ret) {
             ret = JSON.parse(ret);
-            $tryit.find(".checkio-result-in").html(ret);
+            if (ret === true) {
+                $tryit.find('.checkio_result').html("Good password (True)");
+            }
+            else if (ret === false) {
+                $tryit.find('.checkio_result').html("Bad password (False)");
+            }
+            else {
+                $tryit.find(".checkio-result-in").html(ext.JSON.encode(ret));
+            }
         });
 
         ext.set_generate_animation_panel(function (this_e) {
             $tryit = $(this_e.setHtmlTryIt(ext.get_template('tryit'))).find(".tryit-content");
             //Your code here about tryit animation
-            //
-            //
-            //
-            //
-            //
-            //
+            $tryit.find('.password_input').focus();
 
-            //run checking
-            $tryit.find('.bn-check').click(function (e) {
-                //collect data from your tryit panel
-                var data = 0;
 
-                //send it for check
-                this_e.sendToConsoleCheckiO(data);
-                //After it will be called set_console_process_ret
+            $tryit.find('form').submit(function(e){
+                var password = $tryit.find('.password_input').val();
+                this_e.sendToConsoleCheckiO(password);
                 e.stopPropagation();
                 return false;
             });
