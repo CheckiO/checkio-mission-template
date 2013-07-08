@@ -93,7 +93,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
             catch(err){}
 
-            $tryit.find(".checkio-result-in").html(ret);
+            $tryit.find(".checkio-result-in").html(ext.JSON.encode(ret));
         });
 
         ext.set_generate_animation_panel(function (this_e) {
