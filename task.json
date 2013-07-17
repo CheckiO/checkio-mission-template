@@ -1,7 +1,8 @@
 {
     "global": {
 
-        "task_name": "New Task Template"
+        "task_name": "New Task Template",
+        "task_slug": "new_task_template"
     },
     "editor": {
         "expand_animation_results": true,
