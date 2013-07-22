@@ -1,5 +1,5 @@
 OPTIONS = {
-    "random_select": 3
+    "rand_tests_quantity": 3
 }
 
 TESTS = [
