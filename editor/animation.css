@@ -64,6 +64,7 @@
 .tryit-content .tool td{
     text-align: center;
     vertical-align: top;
+    padding: 3px;
 }
 
 /*it for firefox*/
@@ -79,9 +80,82 @@
 }
 
 .tryit-content .btn {
-
+    padding: 4px 6px;
+    font-size: 14px;
+    font-family: Verdana;
+    font-weight: 500;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #8FC7ED;
 }
 
+.tryit-content .btn:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.tryit-content .btn:hover,
+.tryit-content .btn:focus {
+    text-decoration: none;
+    background-color: #65A1CF;
+}
+
+.tryit-content .btn:active,
+.tryit-content .btn.active {
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.tryit-content .btn.disabled,
+.tryit-content .btn[disabled],
+fieldset[disabled] .btn {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.tryit-content input[type="text"],
+.tryit-content input[type="number"]
+{
+    display: inline-block;
+    padding: 4px 6px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    font-family: inherit;
+    color: #294270;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.tryit-content input[type="text"]:focus,
+.tryit-content input[type="number"]:focus{
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+.tryit-content input[type="text"][disabled],
+.tryit-content input[type="number"][readonly]{
+    cursor: not-allowed;
+    background-color: #eeeeee;
+}
 
 /* Your CSS */
 /*          */
