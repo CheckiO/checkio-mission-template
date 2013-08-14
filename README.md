@@ -71,6 +71,14 @@ class does not show in the editor's task description.
 #### short_task_description.html
 Short text for remind the task.
 
+
+#### task.json
+This is the task config with some useful info.
+
+*global section*
+
+**task_name** -- The name of the task.
+
 ### Verification Folder
 
 This folder contains files with tests.
