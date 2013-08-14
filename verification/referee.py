@@ -1,16 +1,16 @@
 """
 CheckiOReferee is a base referee for checking you code.
     arguments:
-        tests -- the dict which contains tests in the specific structure.
-            Example you can see in tests.py.
-        cover_code -- it's a wrapper for user function for addition operations before give data
-            in user function. You can use some predefined codes from checkio.referee.cover_codes
-        checker -- it's replacing for default checking of user function result. If given, then
-            instead simple "==" will be using checker function which return tuple with result
+        tests -- the dict contains tests in the specific structure.
+            You can find an example in tests.py.
+        cover_code -- is a wrapper for the user function and additional operations before give data
+            in the user function. You can use some predefined codes from checkio.referee.cover_codes
+        checker -- is replacement for the default checking of an user function result. If given, then
+            instead simple "==" will be using the checker function which return tuple with result
             (false or true) and some additional info (some message).
             You can use some predefined codes from checkio.referee.checkers
         add_allowed_modules -- additional module which will be allowed for your task.
-        add_close_buildins -- some closed buildin words, as example, if you want close "eval"
+        add_close_buildins -- some closed buildin words, as example, if you want, you can close "eval"
         remove_allowed_modules -- close standard library modules, as example "math"
 
 checkio.referee.checkers

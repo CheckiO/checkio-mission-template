@@ -79,6 +79,8 @@ This is the task config with some useful info.
 
 **task_name** -- The name of the task.
 
+**task_slug** -- The slug of the task.
+
 ### Verification Folder
 
 This folder contains files with tests.
