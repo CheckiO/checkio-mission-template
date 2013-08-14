@@ -9,6 +9,8 @@ your file and naming conventions.
 Tasks examples
 --------------
 
+Some examples
+
 
 Files definition
 ----------------
@@ -66,6 +68,9 @@ This is some funny story about task, it does not need to
 explain task's goal. A paragraph of div with the story
 class does not show in the editor's task description.
 
+#### short_task_description.html
+Short text for remind the task.
+
 
 #### task.json
 This is the task config with some useful info.
@@ -73,16 +78,6 @@ This is the task config with some useful info.
 *global section*
 
 **task_name** -- The name of the task.
-
-*editor section*
-
-**tryit\_results\_height** -- the height of tryit results. If you dont want to use tryit, then set it to 1.
-
-**tryit\_results\_width**  -- the width of tryit results. If you dont want to use tryit, then set it to 1.
-
-**animation\_panel\_width**  -- the width of animation's panel.
-
-**console\_height** -- the height of bottom console. As usual, set it as tryit\_results\_height + 30
 
 ### Verification Folder
 
@@ -97,25 +92,31 @@ The base referee use "input" as input data, "answer" as right answer, "explanati
 
 Here is the code which users will see as a starting template for interpretator
 
+If you use string for python2.7 -- use unicode string.
+
 ### Editor folder
 
-#### animation.js
+
+#### templates.html
+
+This file describe layout and structure for tests explanation or tryit.
+It's **not necessary** to change it.
+
+Further description of this will be added later.
+
+
+#### Animation Folder
+
+#### init.js
 
 This file describe an animation for tests explanation or tryit.
 It's **not necessary** to change it.
 
 Further description of this will be added later.
 
-#### animation.css
+#### init.css
 
 This file describe styles for tests explanation or tryit.
-It's **not necessary** to change it.
-
-Further description of this will be added later.
-
-#### template.html
-
-This file describe layout and structure for tests explanation or tryit.
 It's **not necessary** to change it.
 
 Further description of this will be added later.

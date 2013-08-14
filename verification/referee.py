@@ -1,65 +1,48 @@
-import random
+"""
+CheckiOReferee is a base referee for checking you code.
+    arguments:
+        tests -- the dict which contains tests in the specific structure.
+            Example you can see in tests.py.
+        cover_code -- it's a wrapper for user function for addition operations before give data
+            in user function. You can use some predefined codes from checkio.referee.cover_codes
+        checker -- it's replacing for default checking of user function result. If given, then
+            instead simple "==" will be using checker function.
+            You can use some predefined codes from checkio.referee.checkers
+        add_allowed_modules -- additional module which will be allowed for your task.
+        add_close_buildins -- some closed buildin words, as example, if you want close "eval"
+        remove_allowed_modules -- close standard library modules, as example "math"
 
-TESTS = None
-RAND_TESTS = None
-CURRENT_TEST = None
-#options
-RAND_TESTS_QUANTITY = None
-FLOAT_PRECISION = None
+checkio.referee.checkers
+    checkers.float_comparison -- Checking function fabric for check result with float numbers.
+        Syntax: checkers.float_comparison(digits) -- where "digits" is a quantity of significant
+            digits after coma.
 
-def initial_checkio(data):
-    global TESTS
-    global RAND_TESTS
-    global CURRENT_TEST
-    global RAND_TESTS_QUANTITY
-    global FLOAT_PRECISION
-    TESTS = data.get("tests", data.get("rand_tests", []))
+checkio.referee.cover_codes
+    cover_codes.unwrap_args -- Your "input" from test can be given as a list. if you want unwrap this
+        before user function calling, then using this function. For example: if your test's input
+        is [2, 2] and you use this cover_code, then user function will be called as checkio(2, 2)
+    cover_codes.unwrap_kwargs -- the same as unwrap_kwargs, but unwrap dict.
 
-    options = data.get("options", {})
-    RAND_TESTS_QUANTITY = options.get("rand_tests_quantity", 0)
-    if RAND_TESTS_QUANTITY <= 0:
-        RAND_TESTS_QUANTITY = -1
-    FLOAT_PRECISION = options.get("float_precision", None)
+"""
 
-    if RAND_TESTS_QUANTITY == -1 and TESTS:
-        CURRENT_TEST = TESTS.pop(0)
-    else:
-        if RAND_TESTS_QUANTITY and TESTS:
-            CURRENT_TEST = random.choice(TESTS)
-            RAND_TESTS_QUANTITY -= 1
-        else:
-            raise DoneTest(1)
+from checkio.signals import ON_CONNECT
+from checkio import api
+from checkio.referees.ext_io import CheckiOReferee
+from checkio.referees import cover_codes
+from checkio.referees import checkers
 
-    return CURRENT_TEST["input"]
+from tests import TESTS
 
-
-def checkio(data):
-    global TESTS
-    global RAND_TESTS
-    global CURRENT_TEST
-    global RAND_TESTS_QUANTITY
-    global FLOAT_PRECISION
-    CURRENT_TEST["user_answer"] = data
-    answer = CURRENT_TEST["answer"]
-
-    if (FLOAT_PRECISION and
-                        answer - FLOAT_PRECISION <= data <= answer + FLOAT_PRECISION):
-        CURRENT_TEST["result"] = True
-    elif data == CURRENT_TEST["answer"]:
-        CURRENT_TEST["result"] = True
-    else:
-        CURRENT_TEST["result"] = False
-    ext_animation(CURRENT_TEST)
-    if not CURRENT_TEST["result"]:
-        raise FailTest('ERROR')
-
-    if RAND_TESTS_QUANTITY == -1 and TESTS:
-        CURRENT_TEST = TESTS.pop(0)
-    else:
-        if RAND_TESTS_QUANTITY and TESTS:
-            CURRENT_TEST = random.choice(TESTS)
-            RAND_TESTS_QUANTITY -= 1
-        else:
-            raise DoneTest(1)
-
-    return CURRENT_TEST["input"]
+api.add_listener(
+    ON_CONNECT,
+    CheckiOReferee(
+        tests=TESTS,
+        cover_code={
+            'python-27': cover_codes.unwrap_args,  # or None
+            'python-3': cover_codes.unwrap_args
+        },
+        checker=None,  # checkers.float.comparison(2)
+        add_allowed_modules=[],
+        add_close_buildins=[],
+        remove_allowed_modules=[]
+    ).on_ready)
