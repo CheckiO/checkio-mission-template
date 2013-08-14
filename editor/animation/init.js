@@ -8,7 +8,11 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
         });
 
         ext.set_process_in(function (this_e, data) {
-            cur_slide[data[1]] = data[0];
+            cur_slide["in"] = data[0];
+        });
+
+        ext.set_process_out(function (this_e, data) {
+            cur_slide["out"] = data[0];
         });
 
         ext.set_process_ext(function (this_e, data) {
@@ -46,9 +50,9 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
 
-            var checkioInput = data.ext["input"];
+            var checkioInput = data.in;
             var rightResult = data.ext["answer"];
-            var userResult = data.req;
+            var userResult = data.out;
             var result = data.ext["result"];
 
             //if you need additional info from tests (if exists)
