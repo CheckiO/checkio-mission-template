@@ -6,7 +6,8 @@ CheckiOReferee is a base referee for checking you code.
         cover_code -- it's a wrapper for user function for addition operations before give data
             in user function. You can use some predefined codes from checkio.referee.cover_codes
         checker -- it's replacing for default checking of user function result. If given, then
-            instead simple "==" will be using checker function.
+            instead simple "==" will be using checker function which return tuple with result
+            (false or true) and some additional info (some message).
             You can use some predefined codes from checkio.referee.checkers
         add_allowed_modules -- additional module which will be allowed for your task.
         add_close_buildins -- some closed buildin words, as example, if you want close "eval"
