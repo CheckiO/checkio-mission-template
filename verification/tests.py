@@ -21,7 +21,7 @@ TESTS = {
             "explanation": "2+7=?"
         }
     ],
-    "Additional": [
+    "Extra": [
         {
             "input": [6, 3],
             "answer": 9,
