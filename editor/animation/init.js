@@ -39,7 +39,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
             if (data.error) {
-                $content.find('.call').html('Fail: checkio(' + ext.JSON.encode(data.referee) + ')');
+                $content.find('.call').html('Fail: checkio(' + ext.JSON.encode(data.in) + ')');
                 $content.find('.output').html(data.error.replace(/\n/g, ","));
 
                 $content.find('.output').addClass('error');
