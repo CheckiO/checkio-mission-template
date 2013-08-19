@@ -6,14 +6,16 @@ It have fixed the folder structure so please be careful with
 your file and naming conventions.
 
 
-Tasks examples
---------------
+## Tasks examples
 
-Some examples
+https://github.com/Bryukh-Checkio-Tasks/checkio-task-triangle-angles
+
+https://github.com/Bryukh-Checkio-Tasks/checkio-task-magic-square
 
 
-Files definition
-----------------
+## Some examples
+
+# Files definition
 
 Below you can read an explanation for role of each folder and file inside the project.
 
@@ -71,24 +73,9 @@ class does not show in the editor's task description.
 #### short_task_description.html
 Short text for remind the task.
 
-
-#### task.json
-This is the task config with some useful info.
-
-*global section*
-
-**task_name** -- The name of the task.
-
-**task_slug** -- The slug of the task.
-
 ### Verification Folder
 
-This folder contains files with tests.
-Each set of test must be a python file with name test\_*category*.py.
-Each file contain variable name TESTS with a list of dicts using for testing with referee file.
-The base referee use "input" as input data, "answer" as right answer, "explanation" as additional info if you use some animation.
-
-
+This folder contains referee and additional files with tests, if you need these. Also it contains the folder with initial codes.
 
 #### initial_code/interpretator
 
@@ -122,4 +109,5 @@ This file describe styles for tests explanation or tryit.
 It's **not necessary** to change it.
 
 Further description of this will be added later.
+
 
