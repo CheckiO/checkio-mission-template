@@ -10,7 +10,7 @@ CheckiOReferee is a base referee for checking you code.
             (false or true) and some additional info (some message).
             You can use some predefined codes from checkio.referee.checkers
         add_allowed_modules -- additional module which will be allowed for your task.
-        add_close_buildins -- some closed buildin words, as example, if you want, you can close "eval"
+        add_close_builtins -- some closed builtin words, as example, if you want, you can close "eval"
         remove_allowed_modules -- close standard library modules, as example "math"
 
 checkio.referee.checkers
