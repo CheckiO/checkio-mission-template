@@ -11,14 +11,14 @@ Each test is dict with
 TESTS = {
     "Basics": [
         {
-            "input": [2, 3],
+            "input": [3, 2],
             "answer": 5,
-            "explanation": "2+3=?"
+            "explanation": "3+2=?"
         },
         {
-            "input": [2, 7],
-            "answer": 9,
-            "explanation": "2+7=?"
+            "input": [5, 7],
+            "answer": 12,
+            "explanation": "5+7=?"
         }
     ],
     "Extra": [
