@@ -88,43 +88,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
         });
 
-        //TRYIT code
-        var $tryit;
-
-
-        //this function process returned data and show it
-        ext.set_console_process_ret(function (this_e, ret) {
-            try {
-                ret = JSON.parse(ret);
-            }
-            catch(err){}
-
-            $tryit.find(".checkio-result-in").html(ret);
-        });
-
-        ext.set_generate_animation_panel(function (this_e) {
-            $tryit = $(this_e.setHtmlTryIt(ext.get_template('tryit'))).find(".tryit-content");
-            //Your code here about tryit animation
-            //
-            //
-            //
-            //
-            //
-            //
-
-            //run checking
-            $tryit.find('.bn-check').click(function (e) {
-                //collect data from your tryit panel
-                var data = 0;
-
-                //send it for check
-                this_e.sendToConsoleCheckiO(data);
-                //After it will be called set_console_process_ret
-                e.stopPropagation();
-                return false;
-            });
-
-        });
+       
 
         var colorOrange4 = "#F0801A";
         var colorOrange3 = "#FA8F00";
