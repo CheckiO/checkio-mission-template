@@ -1,4 +1,5 @@
 {
     "expand_animation_results": true,
-    "animation_panel_width": 400
+    "animation_panel_width": 400,
+    "console_height": 300
 }
