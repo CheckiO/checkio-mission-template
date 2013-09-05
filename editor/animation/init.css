@@ -49,6 +49,7 @@
     text-align: center;
     letter-spacing: 0.7px;
     word-break: break-word;
+    white-space: pre;
 }
 
 .animation-content .error{
