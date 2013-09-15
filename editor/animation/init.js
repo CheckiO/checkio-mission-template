@@ -101,7 +101,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
         var colorBlue1 = "#8FC7ED";
 
         var colorGrey4 = "#737370";
-        var colorGrey3 = "#D9E9E";
+        var colorGrey3 = "#9D9E9E";
         var colorGrey2 = "#C5C6C6";
         var colorGrey1 = "#EBEDED";
 
