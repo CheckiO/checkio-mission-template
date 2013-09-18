@@ -38,8 +38,11 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 console.log("data is undefined");
                 return false;
             }
+
+            var checkioInput = data.in;
+
             if (data.error) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(data.in) + ')');
+                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
                 $content.find('.output').html(data.error.replace(/\n/g, ","));
 
                 $content.find('.output').addClass('error');
@@ -50,7 +53,6 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
 
-            var checkioInput = data.in;
             var rightResult = data.ext["answer"];
             var userResult = data.out;
             var result = data.ext["result"];
