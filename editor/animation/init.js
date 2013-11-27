@@ -90,7 +90,21 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
         });
 
-       
+        //This is for Tryit (but not necessary)
+//        var $tryit;
+//        ext.set_console_process_ret(function (this_e, ret) {
+//            $tryit.find(".checkio-result").html("Result<br>" + ret);
+//        });
+//
+//        ext.set_generate_animation_panel(function (this_e) {
+//            $tryit = $(this_e.setHtmlTryIt(ext.get_template('tryit'))).find('.tryit-content');
+//            $tryit.find('.bn-check').click(function (e) {
+//                e.preventDefault();
+//                this_e.sendToConsoleCheckiO("something");
+//                e.stopPropagation();
+//                return false;
+//            });
+//        });
 
         var colorOrange4 = "#F0801A";
         var colorOrange3 = "#FA8F00";
