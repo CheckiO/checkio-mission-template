@@ -4,8 +4,8 @@ def checkio(a, b):
     """
     return None
 
-#These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
+    #These "asserts" using only for self-checking and not necessary for auto-testing
     assert checkio(3, 2) == 5
     assert checkio(5, 7) == 12
     print('Done')
