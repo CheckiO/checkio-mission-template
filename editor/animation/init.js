@@ -111,8 +111,6 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 //            $tryit.find('.bn-check').click(function (e) {
 //                e.preventDefault();
 //                this_e.sendToConsoleCheckiO("something");
-//                e.stopPropagation();
-//                return false;
 //            });
 //        });
 
