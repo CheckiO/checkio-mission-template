@@ -39,8 +39,11 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
 
+            //YOUR FUNCTION NAME
+            var fname = 'checkio';
+
             var checkioInput = data.in;
-            var checkioInputStr = ' checkio(' + JSON.stringify(checkioInput)  + ')';
+            var checkioInputStr = ' ' + fname + '(' + JSON.stringify(checkioInput)  + ')';
 
             var failError = function(dError) {
                 $content.find('.call').html('Fail: ' + checkioInputStr);
@@ -85,7 +88,6 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.call').html('Pass: ' + checkioInputStr);
                 $content.find('.answer').remove();
             }
-            //Dont change the code before it
 
             //Your code here about test explanation animation
             //$content.find(".explanation").html("Something text for example");
