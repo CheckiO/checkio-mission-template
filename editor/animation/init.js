@@ -43,7 +43,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var fname = 'checkio';
 
             var checkioInput = data.in;
-            var checkioInputStr = ' ' + fname + '(' + JSON.stringify(checkioInput)  + ')';
+            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput)  + ')';
 
             var failError = function(dError) {
                 $content.find('.call').html('Fail: ' + checkioInputStr);
