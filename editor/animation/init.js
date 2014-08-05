@@ -1,6 +1,6 @@
 //Dont change it
-requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
-    function (ext, $, TableComponent) {
+requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
+    function (ext, $, Raphael, Snap) {
 
         var cur_slide = {};
 
@@ -8,7 +8,9 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
         });
 
         ext.set_process_in(function (this_e, data) {
+            cur_slide = {};
             cur_slide["in"] = data[0];
+            this_e.addAnimationSlide(cur_slide);
         });
 
         ext.set_process_out(function (this_e, data) {
@@ -17,8 +19,6 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
         ext.set_process_ext(function (this_e, data) {
             cur_slide.ext = data;
-            this_e.addAnimationSlide(cur_slide);
-            cur_slide = {};
         });
 
         ext.set_process_err(function (this_e, data) {
@@ -43,10 +43,10 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var fname = 'checkio';
 
             var checkioInput = data.in;
-            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput)  + ')';
+            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput) + ')';
 
-            var failError = function(dError) {
-                $content.find('.call').html('Fail: ' + checkioInputStr);
+            var failError = function (dError) {
+                $content.find('.call').html(checkioInputStr);
                 $content.find('.output').html(dError.replace(/\n/g, ","));
 
                 $content.find('.output').addClass('error');
@@ -66,28 +66,30 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
 
-            var rightResult = data.ext["answer"];
-            var userResult = data.out;
-            var result = data.ext["result"];
-            var result_addon = data.ext["result_addon"];
+            $content.find('.call').html(checkioInputStr);
+            $content.find('.output').html('Working...');
 
 
-            //if you need additional info from tests (if exists)
-            var explanation = data.ext["explanation"];
+            if (data.ext) {
+                var rightResult = data.ext["answer"];
+                var userResult = data.out;
+                var result = data.ext["result"];
+                var result_addon = data.ext["result_addon"];
 
-            $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
-
-            if (!result) {
-                $content.find('.call').html('Fail: ' + checkioInputStr);
-                $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
-                $content.find('.answer').addClass('error');
-                $content.find('.output').addClass('error');
-                $content.find('.call').addClass('error');
+                //if you need additional info from tests (if exists)
+                var explanation = data.ext["explanation"];
+                $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
+                if (!result) {
+                    $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
+                    $content.find('.answer').addClass('error');
+                    $content.find('.output').addClass('error');
+                    $content.find('.call').addClass('error');
+                }
             }
             else {
-                $content.find('.call').html('Pass: ' + checkioInputStr);
                 $content.find('.answer').remove();
             }
+
 
             //Your code here about test explanation animation
             //$content.find(".explanation").html("Something text for example");
