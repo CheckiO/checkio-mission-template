@@ -85,6 +85,9 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
                     $content.find('.output').addClass('error');
                     $content.find('.call').addClass('error');
                 }
+                else {
+                    $content.find('.answer').remove();
+                }
             }
             else {
                 $content.find('.answer').remove();
