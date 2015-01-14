@@ -121,22 +121,32 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
 //            });
 //        });
 
-        var colorOrange4 = "#F0801A";
-        var colorOrange3 = "#FA8F00";
-        var colorOrange2 = "#FAA600";
-        var colorOrange1 = "#FABA00";
 
-        var colorBlue4 = "#294270";
-        var colorBlue3 = "#006CA9";
-        var colorBlue2 = "#65A1CF";
-        var colorBlue1 = "#8FC7ED";
+        function SVG(dom) {
+            var colorOrange4 = "#a83901";
+            var colorOrange3 = "#ca4701";
+            var colorOrange2 = "#fa5e09";
+            var colorOrange1 = "#Ff935b";
 
-        var colorGrey4 = "#737370";
-        var colorGrey3 = "#9D9E9E";
-        var colorGrey2 = "#C5C6C6";
-        var colorGrey1 = "#EBEDED";
+            var colorBlue4 = "#115d81";
+            var colorBlue3 = "#2b95c5";
+            var colorBlue2 = "#9ad0ec";
+            var colorBlue1 = "#dceaf1";
 
-        var colorWhite = "#FFFFFF";
+            var colorGrey4 = "#000000";
+            var colorGrey3 = "#373737";
+            var colorGrey2 = "#7e7e7e";
+            var colorGrey1 = "#cecece";
+
+            var colorWhite = "#FFFFFF";
+
+            var paper;
+
+            this.draw = function() {};
+
+            this.animate = function(){};
+        }
+
         //Your Additional functions or objects inside scope
         //
         //
