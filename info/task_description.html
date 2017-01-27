@@ -1,4 +1,4 @@
-<p xmlns="http://www.w3.org/1999/html">
+<p>
     <i>( Describe task in general )</i>
 </p>
 
@@ -7,8 +7,7 @@
 </p>
 
 <p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.svg" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.svg" alt="example" width="380px"/>
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
 </p>
 
 <p><i>( Explain input and output values )</i></p>
@@ -27,10 +26,13 @@
     <p>
         <strong>Example:</strong>
     </p>
-    <textarea data-code="python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </textarea>
+<pre class="brush: python">{% if interpreter.slug == "js-node" %}
+sumTwo(2, 3) == 5
+sumTwo(5, 7) == 12
+{% else %}
+sum_two(2, 3) == 5
+sum_two(5, 7) == 12
+{% endif %}</pre>
 </div>
 
 <p class="for_info_only">

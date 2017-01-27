@@ -1,0 +1,13 @@
+"use strict";
+
+function sumTwo(a, b) {
+    return 0;
+}
+
+var assert = require('assert');
+
+if (!global.is_checking) {
+    assert.equal(sumTwo(3, 2), 5, "First")
+    assert.equal(sumTwo(5, 7), 12, "Second")
+    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
+}
