@@ -1,6 +1,9 @@
 "use strict";
 
 function sumTwo(a, b) {
+    // sums two passed arguments
+
+    // your code here
     return 0;
 }
 

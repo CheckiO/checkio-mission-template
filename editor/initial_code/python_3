@@ -2,6 +2,7 @@ def sum_two(a, b):
     """
         sums two passed arguments
     """
+    # your code here
     return None
 
 if __name__ == '__main__':
