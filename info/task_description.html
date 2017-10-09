@@ -26,13 +26,16 @@
     <p>
         <strong>Example:</strong>
     </p>
-<pre class="brush: python">{% if interpreter.slug == "js-node" %}
-sumTwo(2, 3) == 5
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">sumTwo(2, 3) == 5
 sumTwo(5, 7) == 12
+</pre>
 {% else %}
-sum_two(2, 3) == 5
+<pre class="brush: python">sum_two(2, 3) == 5
 sum_two(5, 7) == 12
-{% endif %}</pre>
+</pre>
+{% endif %}
 </div>
 
 <p class="for_info_only">
