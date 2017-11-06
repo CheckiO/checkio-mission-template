@@ -13,7 +13,7 @@ if (!global.is_checking) {
     console.log(sumTwo(3, 2))
 
     // These "asserts" using for self-checking and not for auto-testing
-    assert.equal(sumTwo(3, 2), 5, "First")
-    assert.equal(sumTwo(5, 7), 12, "Second")
+    assert.equal(sumTwo(3, 2), 5)
+    assert.equal(sumTwo(5, 7), 12)
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
