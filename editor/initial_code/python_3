@@ -10,7 +10,7 @@ if __name__ == '__main__':
     print("Example:")
     print(sum_two(3, 2))
     
-    # These "asserts" using for self-checking and not for auto-testing
+    # These "asserts" are used for self-checking and not for an auto-testing
     assert sum_two(3, 2) == 5, "First"
     assert sum_two(5, 7) == 12, "Second"
     print("Coding complete? Click 'Check' to earn cool rewards!")
