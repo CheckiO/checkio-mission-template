@@ -85,7 +85,7 @@ This folder contains a referee and additional files with tests, if you need thes
 
 Here is the code which users will see as a starting template for the interpretator.
 
-If you use a string for python2.7 -- use an unicode string.
+If you use a string for python3 -- use an unicode string.
 
 ### Editor folder
 
