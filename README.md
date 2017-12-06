@@ -8,18 +8,18 @@ your file and naming conventions.
 
 ## Tasks examples
 
-[Traingle angles](https://github.com/Bryukh-Checkio-Tasks/checkio-task-triangle-angles)  
+[Triangle angles](https://github.com/Bryukh-Checkio-Tasks/checkio-task-triangle-angles)  
 
 [Magic square](https://github.com/Bryukh-Checkio-Tasks/checkio-task-magic-square)
 
 
-## Some examples
+## Some more examples made by CheckIO's users
 
-Several users created their own missions, and you can view (and solve!) them on CheckiO.  
-Like [Amachua](http://www.checkio.org/user/Amachua/)’s [Sudoku Solver](http://www.checkio.org/mission/sudokusolver/). Or [Suwanditan](http://www.checkio.org/user/suwanditan/)’s [Periodic Table](http://www.checkio.org/mission/periodic-table/) (our CTO doesn’t even know how to solve this challenge!).
+Several users took the challenge to create their own missions, you can view (and solve!) them on CheckiO.  
+Like [Amachua](http://www.checkio.org/user/Amachua/)’s [Sudoku Solver](http://www.checkio.org/mission/sudokusolver/) or [Suwanditan](http://www.checkio.org/user/suwanditan/)’s [Periodic Table](http://www.checkio.org/mission/periodic-table/) (our CTO doesn’t even know how to solve this challenge!).
 
 
-# Files definition
+# Files definitions
 
 Below you can read an explanation for the role of each folder and file inside the project.
 
@@ -55,19 +55,18 @@ You can use the ```pre``` tag with class "brush: python" for syntax highlighti
 
 ##### Images
 You can paste your images inside the task.
-The image files must be placed inside the illustrations folder.
-The link is defined as src="{{ MEDIA_URL }}/*image-name.png*"
-Illustrations should be created with specified colors from our colors guide. (*color.pdf* or *example.png*))
+The image files must be placed inside the `ìnfo/media` folder.
+The link to these is defined as src="{{ MEDIA_URL }}/*image-name.png*"
+Illustrations should be created with respect to our colors guide.
+(`info/media/example.png` or  `info/vectors/color.pdf`)
 
 ##### Icons
-Icons for the task are placed inside the logo folder.
-Icons are created as a pair: 
-**disabled.svg** for unsolved tasks and **enabled.svg** for solved tasks.
-In the task runner you can see both icons with click to it.
-Icons should be created with specified icons' colors from our colors
-guide (*color.pdf*).
-Icons should be 128x128px and placed inside a grey color block (size 116x116px) with a border radius of 10px.
-Use the given template.
+Icons for the task are placed inside the `info/logo` folder.
+Icons are created as a pair: **disabled.svg** for unsolved tasks and **enabled.svg** for solved tasks.
+In the task runner you will see one of these where you can click on it.
+Icons should be created with specified icons' colors from our colors guide: `info/media/color.pdf`.
+Icons should be 128x128px and placed inside a grey colored block (size 116x116px) , outer corners rounded to a radius of 10px.
+You can use the given templates.
 
 #### story.html
 This is a funny story about the task, it does not need to
@@ -77,41 +76,55 @@ class does not show in the editor's task description.
 #### short_task_description.html
 A summary of the task.
 
-### Verification Folder
 
-This folder contains a referee and additional files with tests, if you need these. Also it contains the folder with initial code.
+# A brief description of the other folders:
 
-#### initial_code/interpretator
+### editor folder
 
-Here is the code which users will see as a starting template for the interpretator.
-
-If you use a string for python2.7 -- use an unicode string.
-
-### Editor folder
-
-
-#### templates.html
-
-This file describes layout and structure for the tests explanation or tryit.
+##### options.json
 It's **not necessary** to change it.
-
+Further description of this will be added later.
+##### templates.html
+This file describes layout and structure for the tests explanation or “try it”.     
+It's **not necessary** to change it.
 Further description of this will be added later.
 
+#### editor/animation Folder
 
-#### Animation Folder
-
-#### init.js
-
-This file describes an animation for the tests explanation or tryit.
+##### init.js
+This file describes an animation for the tests explanation or “try it”.       
+At `python: 'function name'` and `js: 'function name'` you can state the identifier your function is to be called with (line 11, 12). 
 It's **not necessary** to change it.
-
 Further description of this will be added later.
 
-#### init.css
-
-This file describes styles for the tests explanation or tryit.
+##### init.css
+This file describes styles for the tests explanation or “try it”.       
 It's **not necessary** to change it.
-
 Further description of this will be added later.
+
+#### editor/initial_code Folder
+
+##### js-node
+##### python_3
+These 2 files hold the code which users will see as a starting template for the node.js  and the python3 interpretor.
+If you use strings for python3 you can use unicode strings.
+
+### hints Folder
+
+##### _slug.html
+You have the option to give some hints here.
+It’s **not necessary** to change it.
+Further description of this will be added later.
+
+### verification Folder
+The files in this folder are for 'Check'.
+They contain a referee and additional files with your tests.
+
+##### referee. py
+At `python: 'function name'` and `js: 'function name'` you can state the identifier your function is to be called with (line 41, 42).
+This file also contains a referee and additional files for tests; in the file itself you find a detailed description for its use.
+##### tests. py
+Here you can add your test cases; in the file itself you find a detailed description for its use.
+Also, an example is included.
 
 
