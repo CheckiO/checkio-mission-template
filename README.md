@@ -99,6 +99,7 @@ Further description of this will be added later.
 This file describes layout and structure for the tests explanation or “try it”.     
 It's **not necessary** to change it.   
 Further description of this will be added later.   
+If you use a string for python3 -- use an unicode string.
 
 #### editor/animation Folder
 
