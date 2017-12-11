@@ -133,7 +133,7 @@ They contain a referee and additional files with your tests.
 
 ##### referee. py   
 This file also contains a referee and additional files for tests.   
-Line 41: `python: 'function name'` and line 42: `js: 'function name'`.  At `'function name'` you can state the identifier of your function to which the arguments you listed at **test.py** will be parsed for testing.   
+`python: 'function name'` and line 42: `js: 'function name'`.  At `'function name'` you can state the identifier of your function to which the arguments you listed at **test.py** will be parsed for testing.   
 In the file itself you find a detailed description for its use.
 ##### tests. py
 This file holds a dict with all you tests; its keys represent the categorie names of your tests eg. basics, extra, etc.      
