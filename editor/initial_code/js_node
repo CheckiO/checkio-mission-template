@@ -9,11 +9,11 @@ function sumTwo(a, b) {
 
 var assert = require('assert');
 if (!global.is_checking) {
-    console.log('Example:')
-    console.log(sumTwo(3, 2))
+    console.log('Example:');
+    console.log(sumTwo(3, 2));
 
     // These "asserts" are used for self-checking and not for an auto-testing
-    assert.equal(sumTwo(3, 2), 5)
-    assert.equal(sumTwo(5, 7), 12)
+    assert.equal(sumTwo(3, 2), 5);
+    assert.equal(sumTwo(5, 7), 12);
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
