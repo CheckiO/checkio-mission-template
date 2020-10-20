@@ -1,23 +1,9 @@
-checkio-task-template
+CheckiO Mission
 =====================
 
-This is the basic CheckiO template for user generated tasks.   
-It has a fixed folder structure so please be careful with
-your file and naming conventions.
+This is a mission repository for projects like [JS.CheckiO](https://js.checkio.org/), [PY.CheckiO](https://py.checkio.org), [Empire of Code](https://empireofcode.com)
 
-
-## Tasks examples
-
-[Triangle angles](https://github.com/Bryukh-Checkio-Tasks/checkio-task-triangle-angles)   
-
-[Magic square](https://github.com/Bryukh-Checkio-Tasks/checkio-task-magic-square)   
-
-
-## Examples made by CheckIO's users
-
-Several users took the challenge to create their own missions, you can view (and solve!) them on CheckiO.   
-Like [Amachua](http://www.checkio.org/user/Amachua/)’s [Sudoku Solver](http://www.checkio.org/mission/sudokusolver/) or [Suwanditan](http://www.checkio.org/user/suwanditan/)’s [Periodic Table](http://www.checkio.org/mission/periodic-table/).     
-(Psst . . . our CTO doesn’t even know how to solve this challenge!)   
+In order to check this mission you can either find it on one of the listed projects or use [checkio-client](https://github.com/CheckiO/checkio-client)
 
 
 # Files definitions
@@ -71,6 +57,7 @@ where it will be alined to the horizontal center of the page `style="text-align:
 Icons for the task are placed inside the `info/logo` folder.   
 Icons are created as a pair: **disabled.svg** for unsolved tasks and **enabled.svg** for solved tasks.   
 The task runner will show either one of these icons and users will be able to click on it.   
+
 ##### Icon specifications
 All icons shoud match the folowing specifications:    
 **Colors:** Icons should be created with the specified icons' colors from our colors guide: `info/media/color.pdf`.       
@@ -79,10 +66,6 @@ All icons shoud match the folowing specifications:
 At the 'enabled' icon however, some details of this drawing have been accentuated by a blue(#82D1F5) collor to highlight its active status.    
    
 You can use the given templates.    
-
-#### story.html
-This is a funny story about the task, it does not need to explain the task's goal.    
-A paragraph of div with the story class does not show in the editor's task description.    
 
 #### short_task_description.html
 A summary of the task.
@@ -95,6 +78,7 @@ A summary of the task.
 ##### options.json
 It's **not necessary** to change it.    
 Further description of this will be added later.   
+
 ##### templates.html
 This file describes layout and structure for the tests explanation or “try it”.     
 It's **not necessary** to change it.   
@@ -136,6 +120,7 @@ They contain a referee and additional files with your tests.
 This file also contains a referee and additional files for tests.   
 `python: 'function name'` and line 42: `js: 'function name'`.  At `'function name'` you can state the identifier of your function to which the arguments you listed at **test.py** will be parsed for testing.   
 In the file itself you find a detailed description for its use.
+
 ##### tests. py
 This file holds a dict with all you tests; its keys represent the categorie names of your tests eg. basics, extra, etc.      
 In the categories each test is dict again with 3 keys, ie.       
