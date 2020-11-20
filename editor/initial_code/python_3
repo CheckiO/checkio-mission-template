@@ -1,16 +1,13 @@
-def sum_two(a, b):
-    """
-        sums two passed arguments
-    """
+def sum_two(a: int, b: int) -> int:
     # your code here
-    return None
+    return 0
 
 
 if __name__ == '__main__':
     print("Example:")
     print(sum_two(3, 2))
-    
+
     # These "asserts" are used for self-checking and not for an auto-testing
-    assert sum_two(3, 2) == 5, "First"
-    assert sum_two(5, 7) == 12, "Second"
+    assert sum_two(3, 2) == 5
+    assert sum_two(5, 7) == 12
     print("Coding complete? Click 'Check' to earn cool rewards!")

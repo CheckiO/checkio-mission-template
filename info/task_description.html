@@ -24,12 +24,12 @@
         <strong>Example:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
+{% if is_js %}
+<pre class="brush: javascript">sumTwo(3, 2) == 5
 sumTwo(5, 7) == 12
 </pre>
 {% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
+<pre class="brush: python">sum_two(3, 2) == 5
 sum_two(5, 7) == 12
 </pre>
 {% endif %}

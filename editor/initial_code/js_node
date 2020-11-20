@@ -1,19 +1,16 @@
-"use strict";
+import assert from "assert";
 
-function sumTwo(a, b) {
-    // sums two passed arguments
-
+function sumTwo(a: number, b: number): number {
     // your code here
     return 0;
 }
 
-var assert = require('assert');
-if (!global.is_checking) {
-    console.log('Example:');
-    console.log(sumTwo(3, 2));
+console.log('Example:');
+console.log(sumTwo(3, 2));
 
-    // These "asserts" are used for self-checking and not for an auto-testing
-    assert.equal(sumTwo(3, 2), 5);
-    assert.equal(sumTwo(5, 7), 12);
-    console.log("Coding complete? Click 'Check' to earn cool rewards!");
-}
+// These "asserts" are used for self-checking
+assert.equal(sumTwo(3, 2), 5);
+assert.equal(sumTwo(5, 7), 12);
+
+console.log("Coding complete? Click 'Check' to earn cool rewards!");
+    
